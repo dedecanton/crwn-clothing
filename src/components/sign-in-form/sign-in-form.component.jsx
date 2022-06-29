@@ -6,8 +6,7 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
-
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
 const defaultFormFields = {
   email: "",
@@ -17,7 +16,6 @@ const defaultFormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -39,7 +37,7 @@ const SignInForm = () => {
       const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
-      );      
+      );
       resetFormFields();
     } catch (error) {
       switch (error.code) {
@@ -87,7 +85,7 @@ const SignInForm = () => {
           <Button
             type="button"
             onClick={signInWithGoogle}
-            buttonType={"google"}
+            buttonType={BUTTON_TYPE_CLASSES.google}
           >
             Google Sign In
           </Button>
