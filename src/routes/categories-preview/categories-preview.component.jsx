@@ -4,12 +4,12 @@ import CategoryPreview from "../../components/category-preview/category-preview.
 import Spinner from "../../components/spinner/spinner.component";
 import {
   selectCategoriesMap,
-  selectIsLoading,
+  selectCategoriesIsLoading,
 } from "../../store/categories/category.selector";
 
 const CategoriesPreview = () => {
   const categoriesMap = useSelector(selectCategoriesMap);
-  const isLoading = useSelector(selectIsLoading);
+  const isLoading = useSelector(selectCategoriesIsLoading);
 
   return (
     <>
