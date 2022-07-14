@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import "./sign-up-form.styles.scss";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
@@ -21,7 +21,7 @@ const SigUpForm = () => {
     setFormFields(defaultFormFields);
   };
 
-  const handleChange = (event) => {
+  const handleChange = (event:ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
 
     setFormFields({
@@ -30,7 +30,7 @@ const SigUpForm = () => {
     });
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (password !== confirmPassword) {

@@ -5,6 +5,7 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^1.9.0",
     "@stripe/stripe-js": "^1.32.0",
+    "@types/styled-components": "^5.1.25",
     "dotenv": "^16.0.1",
     "firebase": "^9.8.3",
     "react": "^18.1.0",
@@ -20,7 +21,8 @@
     "reselect": "^4.1.6",
     "sass": "^1.52.3",
     "stripe": "^9.12.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "typed-redux-saga": "^1.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,6 +47,8 @@
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "@types/redux-logger": "^3.0.9",
+    "babel-plugin-macros": "^3.1.0",
     "typescript": "^4.7.4"
   }
 }

@@ -6,6 +6,7 @@ import {
   selectCartItems,
   selectCartTotal,
 } from "../../store/cart/cart.selector";
+import { CartItem } from "../../store/cart/cart.types";
 import "./checkout.styles.scss";
 
 const Checkout = () => {
@@ -31,7 +32,7 @@ const Checkout = () => {
         </div>
       </div>
 
-      {cartItems.map((cartItem) => (
+      {cartItems.map((cartItem:CartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <span className="total">Total: {cartTotal}</span>
